@@ -41,3 +41,15 @@ archive=true
 encoding=UTF-8
 highlight=LaTeX
 mode=LaTeX
+
+[item:rect-calc.tex]
+archive=true
+encoding=UTF-8
+highlight=LaTeX
+mode=LaTeX
+
+[item:title.tex]
+archive=true
+encoding=UTF-8
+highlight=LaTeX
+mode=LaTeX
