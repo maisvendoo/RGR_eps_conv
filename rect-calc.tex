@@ -114,12 +114,31 @@
 Подставляем \eqref{eq:Uxxmin} и \eqref{eq:Uxxmax} в \eqref{eq:out_char}, получая выходные характеристики ВУВ при минимальном и максимальном угле открытия тиристоров
 \begin{align}
  \label{eq:min_deg}
- & U_{9^{\circ}}(I) = 160 - 0,064 \, I \\
+ & U_{9^{\circ}}(I) = 160 - 0,0064 \, I \\
  \label{eq:max_deg}
- & U_{76^{\circ}}(I) = 37 - 0,064 \, I 
+ & U_{76^{\circ}}(I) = 37 - 0,0064 \, I 
 \end{align}
-По формулам \eqref{eq:min_deg} и \eqref{eq:max_deg} вычисляем  значения напряжения на выходе ВУВ для нескольких значений тока вобуждения, сводя результаты в таблицу 
+По формулам \eqref{eq:min_deg} и \eqref{eq:max_deg} вычисляем  значения напряжения на выходе ВУВ для нескольких значений тока вобуждения, сводя результаты в таблицу~\ref{tab:out_char} 
 
+\begin{table}[H]
+ \centering
+ \caption{Нагрузочная характеристика выпрямительной установки возбуждения}
+ \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  I, А & 0 & 100 & 200 & 300 & 400 & 500 & 600 & 700 & 800 & 900 \\ \hline
+  $U_{9^{\circ}}$ & 160,0 & 159,4  & 158,7 & 158,1 & 157,5 & 156,9 & 156,3 & 155,6 & 155,0 & 154,4\\ \hline
+  $U_{76^{\circ}}$ & 37,0 & 36,4 & 35,8 & 35,1 & 34,5 & 33,9 & 33,3 & 32,6 & 32,0 & 31,8  \\ \hline
+ \end{tabular}
+ \label{tab:out_char}
+\end{table}
+
+По данным таблицы~\ref{tab:out_char} строим график нагрузочной характеристики ВУВ (рисунок~\ref{fig:out_char_vuv})
+\begin{figure}[H]
+    \centering    
+    \includegraphics[width=0.5\textheight]{out_char_vuv.eps}
+    \caption{Нагрузочные характеристики ВУВ при предельных углах открытия тиристоров}
+    \label{fig:out_char_vuv}
+\end{figure}
 
 
 
