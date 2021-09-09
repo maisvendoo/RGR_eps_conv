@@ -26,6 +26,11 @@
 \begin{equation*}
  U_0 = \frac{U_d^{\max}}{\cos \, \alpha_0} = \frac{155}{\cos \, 9^{\circ}} = 157, \, \text{В}
 \end{equation*}
+Рассчитываем угол открытия тиристоров при минимальном напряжении на выходе ВУВ
+\begin{equation}
+ \alpha_{\max} = \arccos \left( \frac{U_d^{\min}}{U_0} \right) = \arccos \left( \frac{36}{157} \right) = 76^{\circ}
+\end{equation}
+
 Определяем максимальное обратное напряжение на тиристоре, для схемы мостового выпрямителя
 \begin{equation*}
  U_{VS}^{\max} = 3,14 \, U_0 = 3,14 \cdot 157 = 493, \, \text{В}
@@ -100,12 +105,22 @@
 Из формулы \eqref{eq:Uxx} находим напряжение холостого хода при минимальном и максимальном значении напряжения на нагрузке
 \begin{equation}
 \label{eq:Uxxmin}
- U_{\text{хх}}^{\min} = U_d^{\min} + (r_2 + 2 \, r_{\text{т}}) \, I_d^{\min} = 36 + (0,0054 + 2 \cdot 0,00042) \cdot 200 = 37, \text{В}
+ U_{\text{хх}}^{\min}(76^{\circ}) = U_d^{\min} + (r_2 + 2 \, r_{\text{т}}) \, I_d^{\min} = 36 + (0,0054 + 2 \cdot 0,00042) \cdot 200 = 37, \text{В}
 \end{equation}
 \begin{equation}
 \label{eq:Uxxmax}
- U_{\text{хх}}^{\max} = U_d^{\max} + (r_2 + 2 \, r_{\text{т}}) \, I_d^{\max} = 155 + (0,0054 + 2 \cdot 0,00042) \cdot 857 = 160, \text{В}
+ U_{\text{хх}}^{\max}(9^{\circ}) = U_d^{\max} + (r_2 + 2 \, r_{\text{т}}) \, I_d^{\max} = 155 + (0,0054 + 2 \cdot 0,00042) \cdot 857 = 160, \text{В}
 \end{equation}
+Подставляем \eqref{eq:Uxxmin} и \eqref{eq:Uxxmax} в \eqref{eq:out_char}, получая выходные характеристики ВУВ при минимальном и максимальном угле открытия тиристоров
+\begin{align}
+ \label{eq:min_deg}
+ & U_{9^{\circ}}(I) = 160 - 0,064 \, I \\
+ \label{eq:max_deg}
+ & U_{76^{\circ}}(I) = 37 - 0,064 \, I 
+\end{align}
+По формулам \eqref{eq:min_deg} и \eqref{eq:max_deg} вычисляем  значения напряжения на выходе ВУВ для нескольких значений тока вобуждения, сводя результаты в таблицу 
+
+
 
 
 
